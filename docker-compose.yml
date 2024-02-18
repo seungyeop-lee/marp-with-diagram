@@ -1,0 +1,16 @@
+# https://docs.kroki.io/kroki/setup/use-docker-or-podman/#_run_multiple_kroki_containers_together
+version: "3.8"
+
+services:
+  kroki:
+    image: yuzutech/kroki
+    depends_on:
+      - mermaid
+    environment:
+      - KROKI_MERMAID_HOST=mermaid
+    ports:
+      - "18000:8000"
+  mermaid:
+    image: yuzutech/kroki-mermaid
+    expose:
+      - "8002"
