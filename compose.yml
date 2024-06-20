@@ -1,6 +1,4 @@
 # https://docs.kroki.io/kroki/setup/use-docker-or-podman/#_run_multiple_kroki_containers_together
-version: "3.8"
-
 services:
   kroki:
     image: yuzutech/kroki
